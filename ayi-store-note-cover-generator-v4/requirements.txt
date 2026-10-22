@@ -1,0 +1,8 @@
+# 阿一商铺笔记封面生成器 V3 运行依赖
+# 本 Skill 仅需 Pillow 一个第三方库（其余均为 Python 标准库）。
+# 安装方式：在命令行执行以下命令（需先安装 Python 3.8+）
+#
+#   pip install -r requirements.txt
+#
+# 或单独安装：
+#   pip install Pillow

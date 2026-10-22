@@ -1,0 +1,135 @@
+================================================================================
+          阿一探店笔记 V4 级图片去重引擎 —— 支持手机拍摄型号清单
+================================================================================
+
+【使用说明】
+在调用 V4 图片下载器 (xhs_downloader_v4.py) 或批量去重脚本 (image_dedup_processor_v4.py) 时，
+可通过新增参数 `--device` 或 `-dev` 指定本次探店图片是由哪款手机拍摄的。
+
+支持输入：完整机型名称、中文别名、英文简称（系统内置智能模糊匹配，不区分大小写与空格）。
+若不传递该参数，系统将自动根据商铺名称进行哈希锁定，确保同一商铺全套图片使用同一款真实手机。
+
+--------------------------------------------------------------------------------
+一、 苹果 (Apple) 系列
+--------------------------------------------------------------------------------
+1. iPhone 15 Pro Max
+   - 参数写法推荐：--device "iPhone 15 Pro Max" / "苹果15promax" / "15promax"
+   - EXIF 标识：Apple iPhone 15 Pro Max | iOS 17.4.1
+
+2. iPhone 15 Pro
+   - 参数写法推荐：--device "iPhone 15 Pro" / "苹果15pro" / "15pro"
+   - EXIF 标识：Apple iPhone 15 Pro | iOS 17.4.1
+
+3. iPhone 15
+   - 参数写法推荐：--device "iPhone 15" / "苹果15" / "15"
+   - EXIF 标识：Apple iPhone 15 | iOS 17.4.1
+
+4. iPhone 14 Pro Max
+   - 参数写法推荐：--device "iPhone 14 Pro Max" / "苹果14promax" / "14promax"
+   - EXIF 标识：Apple iPhone 14 Pro Max | iOS 17.3.1
+
+5. iPhone 14 Pro
+   - 参数写法推荐：--device "iPhone 14 Pro" / "苹果14pro" / "14pro"
+   - EXIF 标识：Apple iPhone 14 Pro | iOS 17.3.1
+
+6. iPhone 13 Pro
+   - 参数写法推荐：--device "iPhone 13 Pro" / "苹果13pro" / "13pro"
+   - EXIF 标识：Apple iPhone 13 Pro | iOS 16.6.1
+
+--------------------------------------------------------------------------------
+二、 小米 (Xiaomi) 系列
+--------------------------------------------------------------------------------
+7. Xiaomi 14 Ultra (小米 14 Ultra)
+   - 参数写法推荐：--device "Xiaomi 14 Ultra" / "小米14ultra" / "14ultra"
+   - EXIF 标识：Xiaomi Xiaomi 14 Ultra | 徕卡 Summilux 23mm f/1.63
+
+8. Xiaomi 14 Pro (小米 14 Pro)
+   - 参数写法推荐：--device "Xiaomi 14 Pro" / "小米14pro" / "14pro"
+   - EXIF 标识：Xiaomi Xiaomi 14 Pro | 徕卡 Summilux 23mm f/1.42
+
+9. Xiaomi 14 (小米 14)
+   - 参数写法推荐：--device "Xiaomi 14" / "小米14"
+   - EXIF 标识：Xiaomi Xiaomi 14 | 徕卡 Summilux 23mm f/1.6
+
+10. Xiaomi 13 Pro (小米 13 Pro)
+    - 参数写法推荐：--device "Xiaomi 13 Pro" / "小米13pro" / "13pro"
+    - EXIF 标识：Xiaomi Xiaomi 13 Pro | 徕卡 23mm f/1.9
+
+11. Xiaomi 13 (小米 13)
+    - 参数写法推荐：--device "Xiaomi 13" / "小米13"
+    - EXIF 标识：Xiaomi Xiaomi 13 | 徕卡 23mm f/1.8
+
+--------------------------------------------------------------------------------
+三、 华为 (HUAWEI) 系列
+--------------------------------------------------------------------------------
+12. HUAWEI Mate 60 Pro (华为 Mate 60 Pro)
+    - 参数写法推荐：--device "HUAWEI Mate 60 Pro" / "华为mate60pro" / "mate60pro"
+    - EXIF 标识：HUAWEI HUAWEI Mate 60 Pro | XMAGE 超光变 24mm f/1.4
+
+13. HUAWEI Mate 60 (华为 Mate 60)
+    - 参数写法推荐：--device "HUAWEI Mate 60" / "华为mate60" / "mate60"
+    - EXIF 标识：HUAWEI HUAWEI Mate 60 | XMAGE 超光变 24mm f/1.4
+
+14. HUAWEI Pura 70 Pro (华为 Pura 70 Pro)
+    - 参数写法推荐：--device "HUAWEI Pura 70 Pro" / "华为pura70pro" / "pura70"
+    - EXIF 标识：HUAWEI HUAWEI Pura 70 Pro | XMAGE 24.5mm f/1.4
+
+15. HUAWEI P60 Pro (华为 P60 Pro)
+    - 参数写法推荐：--device "HUAWEI P60 Pro" / "华为p60pro" / "p60pro"
+    - EXIF 标识：HUAWEI HUAWEI P60 Pro | XMAGE 24.5mm f/1.4
+
+--------------------------------------------------------------------------------
+四、 vivo 系列
+--------------------------------------------------------------------------------
+16. vivo X100 Pro
+    - 参数写法推荐：--device "vivo X100 Pro" / "vivo x100pro" / "x100pro"
+    - EXIF 标识：vivo vivo X100 Pro | 蔡司 APO 50mm f/1.75
+
+17. vivo X100
+    - 参数写法推荐：--device "vivo X100" / "x100"
+    - EXIF 标识：vivo vivo X100 | 蔡司 23mm f/1.57
+
+18. vivo X90 Pro+
+    - 参数写法推荐：--device "vivo X90 Pro+" / "vivo x90pro" / "x90pro"
+    - EXIF 标识：vivo vivo X90 Pro+ | 蔡司 1英寸 23mm f/1.75
+
+--------------------------------------------------------------------------------
+五、 OPPO 系列
+--------------------------------------------------------------------------------
+19. OPPO Find X7 Ultra
+    - 参数写法推荐：--device "OPPO Find X7 Ultra" / "oppo find x7 ultra" / "find x7 ultra"
+    - EXIF 标识：OPPO OPPO Find X7 Ultra | 哈苏移动影像 23mm f/1.8
+
+20. OPPO Find X7
+    - 参数写法推荐：--device "OPPO Find X7" / "oppo find x7" / "find x7"
+    - EXIF 标识：OPPO OPPO Find X7 | 哈苏移动影像 23mm f/1.6
+
+21. OPPO Find X6 Pro
+    - 参数写法推荐：--device "OPPO Find X6 Pro" / "oppo find x6 pro" / "find x6 pro"
+    - EXIF 标识：OPPO OPPO Find X6 Pro | 哈苏移动影像 23mm f/1.8
+
+--------------------------------------------------------------------------------
+六、 荣耀 (Honor) 系列
+--------------------------------------------------------------------------------
+22. Honor Magic6 Pro (荣耀 Magic6 Pro)
+    - 参数写法推荐：--device "Honor Magic6 Pro" / "荣耀magic6pro" / "magic6pro"
+    - EXIF 标识：HONOR BVL-AN16 | MagicOS 8.0 27mm f/1.4-f/2.0
+
+23. Honor Magic5 Pro (荣耀 Magic5 Pro)
+    - 参数写法推荐：--device "Honor Magic5 Pro" / "荣耀magic5pro" / "magic5pro"
+    - EXIF 标识：HONOR PGT-AN10 | MagicOS 7.1 23mm f/1.6
+
+--------------------------------------------------------------------------------
+【调用示例】
+1. 下载小红书素材并指定为“小米14”拍摄：
+   python xhs_downloader_v4.py --keyword "聚宝源火锅" --count 20 --device "小米14"
+
+2. 下载素材并指定为“iPhone 15 Pro”拍摄：
+   python xhs_downloader_v4.py --keyword "东盛炭烤自助料理" --device "iPhone 15 Pro"
+
+3. 对已下载目录单独做 V4 去重，指定为“华为Mate 60 Pro”拍摄：
+   python image_dedup_processor_v4.py --folder "2026-10-15/东盛炭烤自助料理" --device "华为mate60pro"
+
+4. 不指定手机（缺省时）：
+   系统将通过商铺名称自动计算哈希并锁定上述手机库中的某一款，保证同店同设备。
+================================================================================

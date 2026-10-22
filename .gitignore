@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+input/*
+!input/说明.txt
+*.zip
